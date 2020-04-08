@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="input">Podaj liczbe całkowitą ze znakiem</label>
+        <br>
+        <input type="text" id="input">
+        <br>
+        <button type="submit" id="submit">Sprawdź</button>
+    </form>
+    <script>
+        document.getElementById('submit').addEventListener('click', () => {
+            const input = document.getElementById('input').value;
+            if(input.match(/[-+]{1}[0-9]+/)){
+                alert('poprawne');
+            } else {
+                alert('nie poprawne');
+            }
+        })
+    </script>
+</body>
+</html>
